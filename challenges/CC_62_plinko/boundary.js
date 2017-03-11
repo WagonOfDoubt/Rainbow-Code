@@ -18,12 +18,10 @@ function Boundary(x, y, w, h) {
 }
 
 Boundary.prototype.show = function() {
-  fill(255);
-  stroke(255);
+  ambientMaterial(360, 100, 100);
   var pos = this.body.position;
   push();
   translate(pos.x, pos.y);
-  rectMode(CENTER);
-  rect(0, 0, this.w, this.h);
+  box(this.w, this.h, 50);
   pop();
 }

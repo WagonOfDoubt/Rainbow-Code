@@ -28,11 +28,11 @@ Particle.prototype.isOffScreen = function() {
 }
 
 Particle.prototype.show = function() {
-  fill(this.hue, 255, 255);
+  ambientMaterial(this.hue, 100, 100);
   noStroke();
   var pos = this.body.position;
   push();
   translate(pos.x, pos.y);
-  ellipse(0, 0, this.r * 2);
+  sphere(this.r);
   pop();
 }

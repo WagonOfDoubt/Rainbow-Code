@@ -20,11 +20,11 @@ function Plinko(x, y, r) {
 }
 
 Plinko.prototype.show = function() {
-  noStroke();
-  fill(127);
+  ambientMaterial(360, 100, 100);
   var pos = this.body.position;
   push();
   translate(pos.x, pos.y);
-  ellipse(0, 0, this.r * 2);
+  rotateX(HALF_PI);
+  cylinder(this.r, 50);
   pop();
 }
